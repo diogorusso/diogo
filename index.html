@@ -130,7 +130,7 @@ scripts: about dribbble instagram hscroll
 </div>
 </div> {% endcomment %}
 
-<section class="section-spacing">
+{% comment %} <section class="section-spacing">
 {% capture img_kenner %}
           {{ site.cdn }}{{ include.version }}featured/art.jpg
         {% endcapture %}
@@ -142,11 +142,11 @@ scripts: about dribbble instagram hscroll
                 img=img_kenner
                 bg_color="#7392e8"
         %} 
-</section>
+</section> {% endcomment %}
 
-<div style="background:#151515;padding:9rem 0 6rem;">
+<div style="background:#151515;padding:9rem 0 ">
 <div class="box" style="text-align:center;">
-{% comment %} <h3 style="text-align:center;font-size:3rem;color:#ccc;margin-botton:1.5rem;">Artwork</h3> {% endcomment %}
+<h3 style="text-align:center;font-size:3rem;color:#ccc;margin-bottom:6rem;font-weight:700">Artwork</h3>
 {% include api/instagram/instagram.html %}
 <a href="" style="margin-top:3rem;" class="button button-light" target="_blank" rel="noopener">View More Shots</a>
 </div>
