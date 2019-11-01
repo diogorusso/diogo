@@ -1,6 +1,6 @@
 # Url
-url: https://www.diogorusso.com/diogo
-baseurl: ""
+url: https://www.diogorusso.com
+baseurl: "/diogo"
 
 # Sass
 sass:
