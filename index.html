@@ -1,0 +1,153 @@
+---
+layout: default
+title: About
+scripts: about dribbble instagram hscroll
+---
+
+{% comment %} scripts: instagram {% endcomment %}
+
+{% include components/hero/minimal.html
+  title= "<span class=\"hide-sm reveal-text\">Diogo Russo</span><span class=\"hide-md hide-lg hide-xl show-xs\">Diogo<br>Russo</span>"
+  subtitle="<div class=\"hide-sm\">UX & Product Design</div> <span class=\"hide-md hide-lg hide-xl show-xs\">UX & Product<br>Design</span>"
+  legend= "Combining design, technology, and agriculture to help farmers feed the world at  <span class=\"weight-700\">Climate.com</span>, San Francisco. Co-Founder and Creative Director of Estúdio Berinjela, a design studio in Brazil. I'm an MBA in Design Strategy. I also draw and make art."
+  bg_color="bg-light"
+  txt_color="txt-dark"
+  scroll_arrow="true"
+  anchor="about"
+%}
+
+<a id="about"></a>
+{% include content/bio/bio.html %}
+{% comment %} {% include content/process/process.html %} {% endcomment %}
+{% include summary.html %}
+{% comment %} {% include journal.html %} {% endcomment %}
+
+{% comment %} <div class="row portfolio-title">
+        <div class="col-xs-12">
+          <h1 class="squiggle">Creative LAB</h1>
+          <h3>Artwork + Side Projects + Journal</h3>
+          <br/>
+        </div>
+</div> {% endcomment %}
+{% comment %} {% include journal.html %}
+
+
+<div class="row portfolio-title">
+        <div class="col-xs-12">
+          <h1 class="squiggle">Digital Sketchbook</h1>
+          <h3>Random Shots</h3>
+          <br/>
+        </div>
+</div> {% endcomment %}
+ 
+
+
+{% comment %} <div class="row portfolio-title" style="margin: 3rem auto 3rem">
+        <div class="col-xs-12">
+                <h1>Learn and Have Fun</h1>
+                <h3>Experiments, Ideas & Shots</h3>
+                <br/>
+        </div>
+</div> {% endcomment %}
+{% comment %} {% include journal.html %} {% endcomment %}
+{% comment %} {% include api/dribbble/dribbble.html %} {% endcomment %}
+{% comment %} {% include postsnew.html %} {% endcomment %}
+{% include components/hscroll/hscroll.html %}
+
+
+
+{% comment %} <section class="section-spacing">
+  <div class="row portfolio-title" style="margin: 3rem auto 3rem">
+        <div class="col-xs-12">
+                <h1 style="font-size:2.5rem;">Sketchbook</h1>
+                <h3>Experiments, Ideas & Shots</h3>
+                <br/>
+        </div>
+</div>
+<div class="row row-no-gutter">
+  <div class="col-xs-12 txt-center ">
+    {% include api/instagram/instagram.html %}
+    <div class="more-projects" style="text-align:center;margin:3rem 0 0rem;">
+                <a href="http://work.diogorusso.com/" class="button">Explore Sketches</a>
+        </div>
+  </div>
+  
+</div>
+
+</section> {% endcomment %}
+
+
+
+
+
+{% comment %}
+
+  {% include api/dribbble/dribbble.html %}
+  {% include api/instagram/instagram.html %}
+  {% include featured.html %}
+  {% include posts.html %}
+  {% include artwork.html %}
+  {% include content/journal/posts.html %}
+{% endcomment %}
+
+{% comment %} <div class="row portfolio-title portfolio-title-intro">
+        <div class="col-xs-12">
+                <h1>Have Fun...</h1>
+        </div>
+</div>
+
+<div class="box">
+{% include api/instagram/instagram.html %}
+</div> {% endcomment %}
+
+{% comment %} {% capture img_kenner %}
+          {{ site.cdn }}{{ include.version }}featured/art.jpg
+        {% endcapture %}
+        {% include components/card/large.html 
+                url="https://work.diogorusso.com/illustration-art" 
+                title="Illustration & Art" 
+                categories="Image Creation, Public Instalations, Events  and Collaborative Explorations"
+                buttonLabel="Go to Artwork" 
+                img=img_kenner
+                bg_color="#7392e8"
+        %}  {% endcomment %}
+
+
+
+{% comment %} <div class="row portfolio-title" style="margin: 3rem auto 3rem">
+  <div class="col-xs-12" style="color:#fbfbfb">
+          <h1>Studio</h1>
+          <h3>Artwork, Ideas & Shots</h3>
+          <br/>
+  </div>
+</div> {% endcomment %}
+
+{% comment %} <div style="background:#242424;padding:6rem 0;">
+<div class="box" style="text-align:center;">
+<h3 style="text-align:center;font-size:3rem;color:#ccc;margin-botton:1.5rem;">Artwork</h3>
+{% include api/instagram/instagram.html %}
+<a href="" style="margin-top:3rem;" class="button button-filled" target="_blank" rel="noopener">View More</a>
+</div>
+</div> {% endcomment %}
+
+<section class="section-spacing">
+{% capture img_kenner %}
+          {{ site.cdn }}{{ include.version }}featured/art.jpg
+        {% endcapture %}
+        {% include components/card/large.html 
+                url="https://work.diogorusso.com/illustration-art" 
+                title="Illustration & Art" 
+                categories="Image Creation, Public Instalations, Events  and Collaborative Explorations"
+                buttonLabel="Go to Artwork" 
+                img=img_kenner
+                bg_color="#7392e8"
+        %} 
+</section>
+
+<div style="background:#151515;padding:9rem 0 6rem;">
+<div class="box" style="text-align:center;">
+{% comment %} <h3 style="text-align:center;font-size:3rem;color:#ccc;margin-botton:1.5rem;">Artwork</h3> {% endcomment %}
+{% include api/instagram/instagram.html %}
+<a href="" style="margin-top:3rem;" class="button button-light" target="_blank" rel="noopener">View More Shots</a>
+</div>
+</div>

@@ -1,0 +1,52 @@
+
+{% comment %} <section class="section-spacing txt-center" style="background:url('/assets/cdn/transp_bg.png'); padding: 9rem 0 6rem; margin-top:6rem"> {% endcomment %}
+
+<section class="section-spacing txt-center" style="background:#f3f3f3; margin-top:6rem ">
+  {% comment %} <h3 style="text-align:center;font-size:3rem;margin-botton:1.5rem;">Ideas</h3>
+    <br> {% endcomment %}
+  <div class="row box">
+    {% capture img_strat %}
+      {{ site.cdn}}{{ include.version }}art.jpg
+    {% endcapture %}
+    {% include card.html 
+      title="Artwork"
+      img=img_strat
+     %}
+      {% capture img_strat %}
+      {{ site.cdn}}{{ include.version }}not.jpg
+      {% endcapture %}
+     {% include card.html 
+      title="Open Notes"
+      img=img_strat
+     %}
+     {% capture img_strat %}
+      {{ site.cdn}}{{ include.version }}strat.jpg
+      {% endcapture %}
+     {% include card.html 
+      title="Strategy Design Toolkit"
+      img=img_strat
+     %}
+     {% comment %} {% capture img_strat %}
+      {{ site.cdn}}{{ include.version }}fc.jpg
+      {% endcapture %}
+     {% include card.html 
+      title="Framer X + Cordova"
+      img=img_strat
+     %}
+     {% capture img_strat %}
+      {{ site.cdn}}{{ include.version }}xd.jpg
+      {% endcapture %}
+     {% include card.html 
+      title="XD Auto Animate"
+      img=img_strat
+     %}
+     {% capture img_strat %}
+      {{ site.cdn}}{{ include.version }}code.jpg
+      {% endcapture %}
+     {% include card.html 
+      title="Code Playground"
+      img=img_strat
+     %} {% endcomment %}
+  </div>
+  <a href="" style="margin-top:3rem;" class="button button-filled" target="_blank" rel="noopener">Go to Journal</a>
+</section>
