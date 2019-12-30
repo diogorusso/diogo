@@ -1,0 +1,65 @@
+<div
+  class="isotope"
+  style="margin-top:6rem;"
+  data-isotope='{ 
+                                "itemSelector": ".grid-item-{{include.col}}",
+                                "percentPosition": "true",
+                                "masonry": {
+                                        "columnWidth": ".grid-sizer-{{include.col}}",
+                                        "gutter": ".gutter-sizer"
+                                },
+                                "getSortData": {
+                                        "name": "h2"
+                                }
+                        }'
+>
+  <div class="grid-sizer-{{include.col}}"></div>
+  <div class="gutter-sizer"></div>
+  {% for post in site.posts limit:99 %} 
+        {% capture img_foodtopia %}
+        {{site.baseurl}}/tumblr_files/tumblr_kxqvbcQjpj1qammdvo1_400.jpg 
+        {% endcapture%} 
+        {% capture url_foodtopia %} 
+                {{post.url}}.html 
+        {% endcapture %}
+  {% capture classes %} grid-item-{{include.col}} {% cycle
+  'note','shot','inspiration' %} {% cycle 'diogo','guest' %} {% endcapture %} {%
+  include card_masonry.html url=url_foodtopia class=classes title=post.title
+  categories=post.categories img=img_foodtopia %} {% endfor %} {% comment %} {%
+  capture img_foodtopia %}
+  {{site.baseurl}}/tumblr_files/tumblr_kxqvbcQjpj1qammdvo1_400.jpg {% endcapture
+  %} {% include card_masonry.html
+  url="https://www.linkedin.com/learning/foundations-of-programming-databases"
+  class="full-stack ray" title="a Becoming a Web Developer: Full Stack vs. Front
+  End" categories="Ray Villalobos" img=img_foodtopia %} {% capture img_foodtopia
+  %} {{site.baseurl}}/tumblr_files/tumblr_mw56x1rpKL1qammdvo1_640.jpg {%
+  endcapture %} {% include card_masonry.html
+  url="https://www.linkedin.com/learning/foundations-of-programming-databases"
+  class="full-stack joe front-end skills" title="b Becoming a Web Developer:
+  Full Stack vs. Front End" categories="Joe" img=img_foodtopia %} {% capture
+  img_foodtopia %}
+  {{site.baseurl}}/tumblr_files/tumblr_kxqvbcQjpj1qammdvo1_400.jpg {% endcapture
+  %} {% include card_masonry.html
+  url="https://www.linkedin.com/learning/foundations-of-programming-databases"
+  class="full-stack ray front-end skills" title="c Becoming a Web Developer:
+  Full Stack vs. Front End" categories="Ray Villalobos" img=img_foodtopia %} {%
+  capture img_foodtopia %}
+  {{site.baseurl}}/tumblr_files/tumblr_mw56x1rpKL1qammdvo1_640.jpg {% endcapture
+  %} {% include card_masonry.html
+  url="https://www.linkedin.com/learning/foundations-of-programming-databases"
+  class="full-stack joe front-end skills" title="d Becoming a Web Developer:
+  Full Stack vs. Front End" categories="Joe" img=img_foodtopia %} {% capture
+  img_foodtopia %}
+  {{site.baseurl}}/tumblr_files/tumblr_kxqvbcQjpj1qammdvo1_400.jpg {% endcapture
+  %} {% include card_masonry.html
+  url="https://www.linkedin.com/learning/foundations-of-programming-databases"
+  class="full-stack ray front-end skills" title="e Becoming a Web Developer:
+  Full Stack vs. Front End" categories="Ray Villalobos" img=img_foodtopia %} {%
+  capture img_foodtopia %}
+  {{site.baseurl}}/tumblr_files/tumblr_mw56x1rpKL1qammdvo1_640.jpg {% endcapture
+  %} {% include card_masonry.html
+  url="https://www.linkedin.com/learning/foundations-of-programming-databases"
+  class="full-stack joe front-end skills" title="f Becoming a Web Developer:
+  Full Stack vs. Front End" categories="Joe" img=img_foodtopia %} {% endcomment
+  %}
+</div>

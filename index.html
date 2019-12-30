@@ -1,10 +1,8 @@
 ---
-layout: default
 title: About
+layout: default
 scripts: about dribbble instagram hscroll
 ---
-
-{% comment %} scripts: instagram {% endcomment %}
 
 {% include components/hero/minimal.html
   title= "<span class=\"hide-xs reveal-text\">Diogo Russo</span><span class=\"hide-sm hide-md hide-lg hide-xl show-xs\">Diogo<br>Russo</span>"
@@ -52,7 +50,10 @@ scripts: about dribbble instagram hscroll
 {% comment %} {% include journal.html %} {% endcomment %}
 {% comment %} {% include api/dribbble/dribbble.html %} {% endcomment %}
 {% comment %} {% include postsnew.html %} {% endcomment %}
-{% include components/hscroll/hscroll.html %}
+
+{% include journal.html %}
+
+{% comment %} {% include components/hscroll/hscroll.html %} {% endcomment %}
 
  {% comment %} {% include journal.html %} {% endcomment %}
 

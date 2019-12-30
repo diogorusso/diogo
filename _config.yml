@@ -6,10 +6,17 @@ baseurl: "/diogo"
 sass:
   style: :compressed
 #theme
-remote_theme: 'diogorusso/diogorusso.jekyll.theme'
+remote_theme: "diogorusso/diogorusso.jekyll.theme"
 
 paginate: 5
-plugins: [jekyll-paginate,jekyll-remote-theme,jekyll-gist,jekyll-redirect-from]
+plugins:
+  [
+    jekyll-paginate,
+    jekyll-remote-theme,
+    jekyll-gist,
+    jekyll-redirect-from,
+    jekyll-admin,
+  ]
 
 # Info
 author: "Diogo Russo"
@@ -45,22 +52,22 @@ social:
     url: "https://www.instagram.com/diogorusso/"
 
 #  post permalink
-permalink: /:categories/:slug
+# permalink: /:categories/:slug
 
-exclude: [
-  "Gemfile",
-  "Gemfile.local",
-  "Gemfile.lock",
-  "vendor",
-  "README.md",
-  "LICENSE",
-  "reveal.js/test",
-  "reveal.js/index.html",
-  "reveal.js/README.md",
-  "reveal.js/bower.json",
-  "reveal.js/Gruntfile.js",
-  "reveal.js/CONTRIBUTING.md",
-  "reveal.js/LICENSE",
-  "reveal.js/package.json"
-]
-
+exclude:
+  [
+    "Gemfile",
+    "Gemfile.local",
+    "Gemfile.lock",
+    "vendor",
+    "README.md",
+    "LICENSE",
+    "reveal.js/test",
+    "reveal.js/index.html",
+    "reveal.js/README.md",
+    "reveal.js/bower.json",
+    "reveal.js/Gruntfile.js",
+    "reveal.js/CONTRIBUTING.md",
+    "reveal.js/LICENSE",
+    "reveal.js/package.json",
+  ]

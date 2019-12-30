@@ -1,0 +1,32 @@
+---
+layout: default
+scripts: "isotope"
+title: Open Notes
+---
+
+<div class="box">
+  <h1 class="jumbo" style="margin-top:9rem;margin-bottom:0">{{page.title}}</h1>
+  {% comment %}
+  <h2 style="margin-bottom:1rem;margin-top:0;font-size:2rem;font-style:italic;">
+    Diogo Russo's Journal
+  </h2>
+  {% endcomment %}
+  {% comment %} <h2 class="weight-300" style="max-width:675px;">
+    Welcome to Creative OPs,
+    <span class="weight-400">my personal journal</span>. Micro content created
+    to provide readers with methods and tools to bring ideas to life and make
+    things happen. Inspiration for all, from personal projects and micro
+    ventures to Startups and Business Ventures.
+  </h2>
+  <h2 style="margin-bottom:3rem;margin-top:0">
+    <a href="{{site.baseurl}}/ideas" style="margin-right:16px"
+      >Strategy Studio</a
+    >
+    <a href="{{site.baseurl}}/learn" style="margin-right:16px">Design Farm</a>
+    <a href="{{site.baseurl}}/lab" style="margin-right:16px">Code Camp</a>
+    <a href="{{site.baseurl}}/articles">Image Lab</a>
+  </h2>
+</div> {% endcomment %}
+<div class="box">
+  {% include masonry.html col=3 %}
+</div>

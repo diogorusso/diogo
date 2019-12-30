@@ -1,1 +1,1 @@
-BUNDLE_GEMFILE=Gemfile.local bundle exec jekyll serve --host=localhost --port=4003 --config "_config.yml,_config.dev.yml"
+BUNDLE_GEMFILE=Gemfile.local bundle exec jekyll serve --livereload --host=localhost --port=4003 --config "_config.yml,_config.dev.yml"

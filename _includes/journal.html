@@ -1,4 +1,4 @@
-<section class="section-spacing">
+<section class="section-spacing" style="background:#f3f3f3; margin-top:6rem; padding:9rem 0 6rem;">
          {% comment %} <div class="row portfolio-title">
             <div class="col-xs-12">
                     <h1>Ideas</h1>
@@ -7,13 +7,13 @@
             </div>
           </div> {% endcomment %}
         <div class="box">
-          <div class="row">
+          <div class="row middle-sm around-xs">
                   {% capture img_kenner %}
                     {{ site.cdn }}{{ include.version }}sec1.jpg
                   {% endcapture %}
                   {% include components/card/portfolio.html 
                           url="https://work.diogorusso.com/illustration-art" 
-                          title="Artwork" 
+                          title="Art & Culture" 
                           categories="Image Creation, Public Instalations, Events  and Collaborative Explorations" 
                           img=img_kenner
                   %}
@@ -25,7 +25,7 @@
                   {% endcapture %}
                   {% include components/card/portfolio.html 
                           url="https://www.notion.so/Journal-5c0230c00e6e43c59140861bac1d421f" 
-                          title="Random Notes" 
+                          title="Open Notes" 
                           categories="Ideas, resources. methods and tools to bring ideas to life and make things happen. " 
                           img=img_foodtopia 
                   %}
