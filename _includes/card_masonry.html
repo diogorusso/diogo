@@ -1,7 +1,7 @@
 <article class="{{include.class}}">
   <div
     class="card"
-    style="max-height: 420px;min-height: 460px;overflow: hidden;padding:1.5rem;"
+    style="height:360px; overflow: hidden;"
   >
     <a href="{{ include.url }}">
       {% comment %}
@@ -27,7 +27,7 @@
           {{
           imageMarkup
           }}
-          style="max-height:320px; width:auto;margin:auto;max-width:100%;"
+          style="width:auto;margin:auto;max-width:100%;"
         />
         {% break %} {% endif %} {% endfor %} {% comment %}
         <img
@@ -41,8 +41,8 @@
           alt="{{ site.tile }} {{ include.title }} {{ include.categories }}"
         />
         {% endcomment %}
-        <div class="content" style="padding: 1rem 0;">
-          <h3 class="weight-400" style="font-size:1.2rem;margin:1rem 0 ;">
+        <div class="content" style="padding: 1.25rem 1.5rem 0;">
+          <h3 style="font-size:1.2rem;margin:1rem 0 ;font-weight:400">
             {{ include.title }}
           </h3>
           {% comment %}

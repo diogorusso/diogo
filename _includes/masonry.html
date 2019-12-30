@@ -1,17 +1,17 @@
 <div
   class="isotope"
   style="margin-top:6rem;"
-  data-isotope='{ 
-                                "itemSelector": ".grid-item-{{include.col}}",
-                                "percentPosition": "true",
-                                "masonry": {
-                                        "columnWidth": ".grid-sizer-{{include.col}}",
-                                        "gutter": ".gutter-sizer"
-                                },
-                                "getSortData": {
-                                        "name": "h2"
-                                }
-                        }'
+data-isotope='{ 
+        "itemSelector": ".grid-item-{{include.col}}",
+        "percentPosition": "true",
+        "masonry": {
+                "columnWidth": ".grid-sizer-{{include.col}}",
+                "gutter": ".gutter-sizer"
+        },
+        "getSortData": {
+                "name": "h2"
+        }
+}'
 >
   <div class="grid-sizer-{{include.col}}"></div>
   <div class="gutter-sizer"></div>
@@ -20,12 +20,16 @@
         {{site.baseurl}}/tumblr_files/tumblr_kxqvbcQjpj1qammdvo1_400.jpg 
         {% endcapture%} 
         {% capture url_foodtopia %} 
-                {{post.url}}.html 
+                {{post.url}}
         {% endcapture %}
   {% capture classes %} grid-item-{{include.col}} {% cycle
-  'note','shot','inspiration' %} {% cycle 'diogo','guest' %} {% endcapture %} {%
+  'note','shot','inspiration' %} {% cycle 'diogo','guest' %} {% endcapture %} 
+  
+  {%
   include card_masonry.html url=url_foodtopia class=classes title=post.title
-  categories=post.categories img=img_foodtopia %} {% endfor %} {% comment %} {%
+  categories=post.categories img=img_foodtopia %} 
+  
+  {% endfor %} {% comment %} {%
   capture img_foodtopia %}
   {{site.baseurl}}/tumblr_files/tumblr_kxqvbcQjpj1qammdvo1_400.jpg {% endcapture
   %} {% include card_masonry.html
