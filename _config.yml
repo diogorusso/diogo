@@ -8,7 +8,7 @@ sass:
 #theme
 remote_theme: "diogorusso/diogorusso.jekyll.theme"
 
-paginate: 5
+# paginate: 5
 plugins:
   [
     jekyll-paginate,
@@ -51,23 +51,54 @@ social:
   - title: instagram
     url: "https://www.instagram.com/diogorusso/"
 
+# collections_dir: _collections
+
+collections:
+  categories:
+    output: true
+    permalink: /:path:output_ext
+  pages:
+    output: true
+    permalink: /:path
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "diogo_russo"
+  - scope:
+      path: "_posts/work"
+      type: "posts"
+    values:
+      categories: "work"
+  - scope:
+      path: "_posts/artwork"
+      type: "posts"
+    values:
+      categories: "artwork"
+  - scope:
+      path: "_posts/journal/code-camp"
+      type: "posts"
+    values:
+      categories: "code-camp"
+  - scope:
+      path: "_posts/journal/design-lab"
+      type: "posts"
+    values:
+      categories: "design-lab"
+  - scope:
+      path: "_posts/journal/strategy-studio"
+      type: "posts"
+    values:
+      categories: "strategy-studio"
+
 #  post permalink
 # permalink: /:categories/:slug
 
-exclude:
-  [
-    "Gemfile",
-    "Gemfile.local",
-    "Gemfile.lock",
-    "vendor",
-    "README.md",
-    "LICENSE",
-    "reveal.js/test",
-    "reveal.js/index.html",
-    "reveal.js/README.md",
-    "reveal.js/bower.json",
-    "reveal.js/Gruntfile.js",
-    "reveal.js/CONTRIBUTING.md",
-    "reveal.js/LICENSE",
-    "reveal.js/package.json",
-  ]
+# jekyll_admin:
+#   hidden_links:
+#     - pages
+
+exclude: ["Gemfile", "Gemfile.local", "Gemfile.lock", "README.md", "LICENSE"]

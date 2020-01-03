@@ -1,0 +1,131 @@
+<div class="row box portfolio-title portfolio-title-intro around-xs">
+  <div class="col-xs-8 col-md-12 center-xs">
+    <h1>
+      Digital Tools<br class="hide-sm hide-md" />
+      for Farmers
+    </h1>
+    <h3>
+      Product Design at
+      <a
+        href="https://climate.com/about"
+        target="_blank"
+        rel="noopener noreferrer"
+        >CLIMATE.COM</a
+      ><br/><br/>
+      2016 - Now
+    </h3>
+  </div>
+</div>
+
+
+
+
+<div class="projects-climate">
+
+  {% assign publishedPosts = site.posts | where: 'tags', 'digital-ag'| sort:'date' %}
+
+  {% for post in publishedPosts limit:99 %} 
+    {% capture my_variable %}
+    {{site.baseurl}}{{site.cdn}}projects/{{post.slug}}/cover.jpg 
+    {% endcapture %}
+    {% include components/card/large.html 
+      img=my_variable bg_color="#64b8db"
+      url=post.url 
+      title=post.title 
+      buttonLabel="Read Case"
+      categories=post.description 
+    %} 
+  {% endfor %}
+
+  <div class="row box portfolio-title around-xs">
+    <div class="col-xs-10 col-md-12 center-xs">
+      <h1>Design +<br/>Strategy</h1>
+      <h3>Past Work</h3>
+      {%- comment -%} <h3 style="max-width:400px; margin:auto">
+        My unique background give me the ability to combine a
+        diverse skillset to build products that solve real problems.
+      </h3>{%- endcomment -%}
+    </div>
+  </div>
+
+  {% comment %} {% capture img_dmba %} {{ site.cdn }}{{ include.version
+  }}work2.jpg, {{ site.cdn }}{{ include.version }}work1.jpg, {{ site.cdn }}{{
+  include.version }}work4.jpg {% endcapture %} {% include
+  components/card/large.html type="slider" url="https://work.diogorusso.com/"
+  title="Strategy Design" categories="I was the Co-Founder and Creative Director
+  of Estúdio Berinjela, a design studio in Brazil. I'm an MBA in Design
+  Strategy." buttonLabel="View More" img=img_dmba bg_color="#80f4df" %} {%
+  capture img_dmba %} {{ site.cdn }}{{ include.version }}work3.jpg, {{ site.cdn
+  }}{{ include.version }}work14.jpg, {{ site.cdn }}{{ include.version
+  }}work6.jpg {% endcapture %} {% include components/card/large.html
+  type="slider" url="https://work.diogorusso.com/" title="Creative Direction"
+  categories="I was the Co-Founder and Creative Director of Estúdio Berinjela, a
+  design studio in Brazil. I'm an MBA in Design Strategy." buttonLabel="View
+  More" img=img_dmba bg_color="#80f4df" %} {% endcomment %} {% comment %} {%
+  capture img_dmba %} {{ site.cdnVideo }}{{ include.version }}strategy-kit.jpg
+  {% endcapture %} {% include components/card/large.html
+  url="https://work.diogorusso.com/" title="Strategy & Venture Design Toolkit"
+  categories="Explore Selected Tools and Download the Templates"
+  buttonLabel="View More" img=img_dmba bg_color="#80f4df" %} {% endcomment %} 
+  
+  
+  {% capture img_dmba %} 
+    {{ site.cdnVideo }}{{ include.version }}work25.mp4 
+    {% endcapture %} 
+    {% include components/card/large.html
+      url="https://work.diogorusso.com/" 
+      categories="
+                  <b>MBA in Design Strategy</b> at California College of the Arts,  a program grounded in  Design Research and Lean Validation.
+                  <br/><br/>
+                  <b>Co-Founder and Creative Director</b> at Estúdio Berinjela, a Multimedia Design Studio in Brazil.
+                  " 
+                  
+      buttonLabel="View All Work" 
+      img=img_dmba
+      bg_color="#80f4df" 
+    %} 
+    
+    {% comment %} {% capture img_dmba
+  %} {{ site.cdn }}{{ include.version }}work1.jpg, {{ site.cdn }}{{
+  include.version }}work3.jpg, {{ site.cdn }}{{ include.version }}work7.jpg, {{
+  site.cdn }}{{ include.version }}work7.jpg {% endcapture %} {% include
+  components/card/large.html type="slider" url="https://work.diogorusso.com/"
+  title="Strategy Design + Creative Direction" categories="I was the Co-Founder
+  and Creative Director of Estúdio Berinjela, a design studio in Brazil. I'm an
+  MBA in Design Strategy." buttonLabel="View More" img=img_dmba
+  bg_color="#80f4df" %} {% endcomment %} {% comment %} {% capture img_dmba %} {{
+  site.cdn }}{{ include.version }}featured/lpc.jpg, {{ site.cdn }}{{
+  include.version }}featured/babs.jpg, {{ site.cdn }}{{ include.version
+  }}featured/foodtopia.jpg {% endcapture %} {% include
+  components/card/large.html type="slider"
+  url="https://work.diogorusso.com/launchpad" title="Experience + Strategy
+  Design Projects" categories="User Research, Strategic Insights & UX Design"
+  buttonLabel="View Projects" img=img_dmba bg_color="#80f4df" %} {% endcomment
+  %} {% comment %} {% capture img_dmba %} {{ site.cdn }}{{ include.version
+  }}featured/lpc.jpg {% endcapture %} {% include components/card/large.html
+  url="https://work.diogorusso.com/launchpad" title="Launchpad Central Platform"
+  categories="UX + Visual Design for a Lean Innovation Management and Market
+  Validation Platform" buttonLabel="View Project" img=img_dmba
+  bg_color="#80f4df" %} {% endcomment %} {% comment %} {% capture
+  img_creative_dir %} {{ site.cdn }}{{ include.version }}featured/babs.jpg {%
+  endcapture %} {% include components/card/large.html
+  url="https://work.diogorusso.com/bike-share-market-insights" title="Bay Area
+  Bike Share" categories="User Research, Market Landscape, Strategic Insights
+  and Recommendations" buttonLabel="View Project" img=img_creative_dir
+  bg_color="#fa6f87" %} {% endcomment %} {% comment %} {% capture
+  img_creative_dir %} {{ site.cdn }}{{ include.version }}featured/br.jpg, {{
+  site.cdn }}{{ include.version }}featured/sesc.jpg, {{ site.cdn }}{{
+  include.version }}featured/art.jpg {% endcapture %} {% include
+  components/card/large.html type="slider"
+  url="https://work.diogorusso.com/creative-direction" title="Creative Direction
+  for Graphics & Motion" categories="Co-Founder and Creative Director of Estúdio
+  Berinjela <br />
+  a Design Studio in Brazil" buttonLabel="View Projects" img=img_creative_dir
+  bg_color="#db404f" %} {% endcomment %} {% comment %} {% capture img_kenner %}
+  {{ site.cdn }}{{ include.version }}featured/art.jpg {% endcapture %} {%
+  include components/card/large.html
+  url="https://work.diogorusso.com/illustration-art" title="Illustration & Art"
+  categories="Image Creation, Public Instalations, Events and Collaborative
+  Explorations" buttonLabel="Go to Artwork" img=img_kenner bg_color="#7392e8" %}
+  {% endcomment %}
+</div>

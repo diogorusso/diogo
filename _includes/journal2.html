@@ -1,0 +1,66 @@
+<section class="section-spacing">
+        <div class="row box portfolio-title around-xs" style="margin-bottom:6rem">
+          <div class="col-xs-10 col-md-12 center-xs">
+            <h1>More...</h1>
+            {% comment %}
+            <h3>
+              My unique background and diverse skillset give me the ability to combine
+              DESIGN + STRATEGY to build products that solve real problems.
+            </h3>
+            {% endcomment %}
+            <br />
+          </div>
+        </div>
+        <div class="box">
+          <div class="row middle-sm around-xs">
+                  {% capture img_kenner %}
+                    {{ site.cdn }}{{ include.version }}sec1.jpg
+                  {% endcapture %}
+                  {% include components/card/portfolio.html 
+                          url="https://work.diogorusso.com/illustration-art" 
+                          title="Art & Culture" 
+                          categories="Image Creation, Public Instalations, Events  and Collaborative Explorations" 
+                          img=img_kenner
+                  %}
+                  {% capture img_foodtopia %}
+                    {{ site.cdn }}{{ include.version }}sec4.jpg
+                  {% endcapture %}
+                  {% capture url_foodtopia %}
+                    {{ site.baseurl }}/ideas
+                  {% endcapture %}
+                  {% include components/card/portfolio.html 
+                          url="https://www.notion.so/Journal-5c0230c00e6e43c59140861bac1d421f" 
+                          title="Creative OPs" 
+                          categories="Ideas, resources. methods and tools to bring ideas to life and make things happen. " 
+                          img=img_foodtopia 
+                  %}
+                  {% comment %} {% capture img_kenner %}
+                    {{ site.cdn }}{{ include.version }}sec2.jpg
+                  {% endcapture %}
+                  {% capture url_kenner %}
+                    {{ site.baseurl }}/learn
+                  {% endcapture %}
+                  {% include components/card/portfolio.html 
+                          url=url_kenner 
+                          title="Learn" 
+                          categories="Design, Data & Dev" 
+                          img=img_kenner
+                  %}
+                  {% capture url_foodtopia %}
+                    {{ site.baseurl }}/lab
+                  {% endcapture %}
+                  {% capture img_foodtopia %}
+                    {{ site.cdn }}{{ include.version }}sec3.jpg
+                  {% endcapture %}
+                  {% include components/card/portfolio.html 
+                          url=url_foodtopia 
+                          title="Lab" 
+                          categories="Projects + Experiments" 
+                          img=img_foodtopia 
+                  %}
+                  {% capture url_kenner %}
+                    {{ site.baseurl }}/essays/
+                  {% endcapture %} {% endcomment %}
+          </div>
+        </div>
+</section>

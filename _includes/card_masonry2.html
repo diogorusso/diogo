@@ -1,0 +1,25 @@
+<article class="{{include.class}}">
+  {%- if include.card == "portfolio2" -%}
+    {% include components/card/portfolio2.html
+      col=12 
+      img=include.img 
+      bg_color="#64b8db"
+      url=include.url 
+      title=include.title 
+      categories= include.categories 
+    %} 
+  {%- endif -%}
+  {%- if include.card == "featured" -%}
+    {% include components/card/featured.html
+      col=12 
+      img=include.img 
+      bg_color="#64b8db"
+      url=include.url 
+      title=include.title
+      description=include.description 
+      categories= include.categories 
+    %} 
+  {%- endif -%}
+  
+  
+</article>

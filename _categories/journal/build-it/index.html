@@ -1,0 +1,62 @@
+---
+title: Build It
+layout: default
+hasSidebar: true
+boxSize: 1140px
+scripts: about isotope
+cover: sec4.jpg
+featured: true
+description: Image Creation, Public Instalations, Events  and Collaborative Explorations
+---
+
+<section class="section-spacing">
+{% assign publishedPosts = site.posts | where: 'categories', 'code-camp'| sort:'date' | reverse %}
+
+  {% for post in publishedPosts limit:99 %}
+    {% capture categories %}
+      {%- for category in post.categories -%}
+          {%- if category != post.categories[0] -%}
+          {{category}} 
+        {%- endif -%}
+      {%- endfor -%}
+    {% endcapture %} 
+    {% capture cover %}
+      {{site.baseurl}}{{site.cdn}}{{post.cover}} 
+    {% endcapture %}
+    {% include card_large2.html
+      columns=6 
+      image=cover 
+      bg_color="#64b8db"
+      url=post.url 
+      title=post.title 
+      buttonLabel="Read Case"
+      categories= post.intro 
+    %} 
+  {% endfor %}
+</section>
+
+{%- comment -%} <section class="section-spacing">
+  <div class="row">
+  {% for post in publishedPosts limit:99 %}
+    {% capture categories %}
+      {%- for category in post.categories -%}
+          {%- if category != post.categories[0] -%}
+          {{category}} 
+        {%- endif -%}
+      {%- endfor -%}
+    {% endcapture %} 
+    {% capture cover %}
+      {{site.baseurl}}{{site.cdn}}{{post.cover}} 
+    {% endcapture %}
+    {% include components/card/featured.html
+      columns=6 
+      img=cover 
+      bg_color="#64b8db"
+      url=post.url 
+      title=post.title 
+      buttonLabel="Read Case"
+      categories= post.intro 
+    %} 
+  {% endfor %}
+  </div>
+  </section> {%- endcomment -%}
