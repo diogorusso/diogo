@@ -1,8 +1,7 @@
-url: ""
+url: "http://localhost:4003/"
 baseurl: ""
 cdn: /assets/cdn/
 cdnVideo: /assets/cdn/
 static: /assets/cdn
 remote_theme: ""
 theme: "diogorusso.jekyll.theme"
-
