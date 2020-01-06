@@ -25,12 +25,16 @@
   {% assign publishedPosts = site.posts | where: 'tags', 'digital-ag'| sort:'date' %}
 
   {% for post in publishedPosts limit:99 %} 
-    {% capture my_variable %}
+    {% capture image %}
     {{site.baseurl}}{{site.cdn}}projects/{{post.slug}}/cover.jpg 
     {% endcapture %}
+    {% capture url %}
+    {{site.baseurl}}{{post.url}} 
+    {% endcapture %}
     {% include components/card/large.html 
-      img=my_variable bg_color="#64b8db"
-      url=post.url 
+      img=image 
+      bg_color="#64b8db"
+      url=url 
       title=post.title 
       buttonLabel="Read Case"
       categories=post.description 
