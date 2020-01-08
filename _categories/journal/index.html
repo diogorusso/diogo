@@ -5,7 +5,7 @@ title: Journal
 ---
 
 <div class="row box portfolio-title portfolio-title-intro around-xs" style="margin: 9rem auto 3rem;">
-  <div class="col-xs-8 col-md-12 " style="max-width: 800px;">
+  <div class="col-xs-10 col-md-12 ">
     <h1>
       Creative OPs
     </h1>
@@ -15,7 +15,7 @@ title: Journal
   </div>
 </div>
 
-<div class="box" style="max-width:800px; margin-bottom:6rem">
+<div class="box row around-xs start-sm" style="margin-bottom:6rem">
   
   {% comment %}
   <h2 style="margin-bottom:1rem;margin-top:0;font-size:2rem;font-style:italic;">
@@ -29,15 +29,18 @@ title: Journal
     things happen. Inspiration for all, from personal projects and micro
     ventures to Startups and Business Ventures.
   </h2> {%- endcomment -%}
-  <h2 class="weight-300" style="max-width:500px;margin-bottom:0rem;font-size:1.5rem">
+  <div class="col-xs-10 col-sm-6">
+    <h2 class="weight-300" style="margin-bottom:0rem;font-size:1.5rem">
     Ideas, experiments, methods and tools to help bring ideas to life and make
     things happen. Inspiration for all!    
   </h2>
+  </div>
+  
   
 </div>
 
 
-<section style="padding: 0 0 3rem; max-width: 940px; margin:auto">
+<section style="padding: 0 0 3rem; margin:auto">
 <div class="row box around-xs">
   {% assign sorted = site.categories | sort: 'date' |  where: 'featured','true' | reverse %}
     {% for category in sorted limit:4 %} 
