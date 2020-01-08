@@ -38,7 +38,7 @@ title: Journal
 
 
 <section style="padding: 0 0 3rem; max-width: 940px; margin:auto">
-<div class="row box">
+<div class="row box around-xs">
   {% assign sorted = site.categories | sort: 'date' |  where: 'featured','true' | reverse %}
     {% for category in sorted limit:4 %} 
           
