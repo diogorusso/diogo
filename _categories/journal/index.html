@@ -4,7 +4,10 @@ scripts: "about isotope"
 title: Journal
 ---
 
-<div class="row box portfolio-title portfolio-title-intro around-xs" style="margin: 9rem auto 3rem;">
+<div
+  class="row box portfolio-title portfolio-title-intro around-xs"
+  style="margin: 9rem auto 3rem;"
+>
   <div class="col-xs-10 col-md-12 ">
     <h1>
       Creative OPs
@@ -16,55 +19,45 @@ title: Journal
 </div>
 
 <div class="box row around-xs start-sm" style="margin-bottom:6rem">
-  
   {% comment %}
   <h2 style="margin-bottom:1rem;margin-top:0;font-size:2rem;font-style:italic;">
     Diogo Russo's Journal
   </h2>
-  {% endcomment %}
-  {%- comment -%} <h2 class="weight-300" style="max-width:675px;margin-bottom:9rem;">
+  {% endcomment %} {%- comment -%}
+  <h2 class="weight-300" style="max-width:675px;margin-bottom:9rem;">
     Welcome to Creative OPs,
     <span class="weight-400">my personal journal</span>. Micro content created
     to provide readers with methods and tools to bring ideas to life and make
     things happen. Inspiration for all, from personal projects and micro
     ventures to Startups and Business Ventures.
-  </h2> {%- endcomment -%}
+  </h2>
+  {%- endcomment -%}
   <div class="col-xs-10 col-sm-8 col-md-6">
     <h2 class="weight-300" style="margin-bottom:0rem;font-size:1.5rem">
-    Ideas, experiments, methods and tools to help bring ideas to life and make
-    things happen. Inspiration for all!    
-  </h2>
+      Ideas, experiments, methods and tools to help bring ideas to life and make
+      things happen. Inspiration for all!
+    </h2>
   </div>
-  
-  
 </div>
 
-
 <section style="padding: 0 0 3rem; margin:auto">
-<div class="row box around-xs">
-  {% assign sorted = site.categories | sort: 'date' |  where: 'featured','true' | reverse %}
-    {% for category in sorted limit:4 %} 
-          
-          {% capture img %}
-                  {{site.baseurl}}{{site.cdn}}{{category.cover}}
-          {% endcapture %}
-
-          {% include components/card/portfolio.html
-          cols=6
-          url=category.url 
-          class=classes 
-          title=category.title
-          img= img %} 
-    
-    {% endfor %}
+  <div class="row box around-xs">
+    {% assign sorted = site.categories | sort: 'date' | where: 'featured','true'
+    | reverse %} {% for category in sorted limit:4 %} {% capture img %}
+    {{site.baseurl}}{{site.cdn}}{{category.cover}} {% endcapture %} {% capture
+    url %} {{site.baseurl}}{{category.url}} {% endcapture %} {% include
+    components/card/portfolio.html cols=6 url=url class=classes
+    title=category.title img= img %} {% endfor %}
   </div>
-  </section>
+</section>
 
-{%- comment -%} <div>
+{%- comment -%}
+<div>
   {% for post in site.posts limit:4%} {% capture img %} {% if post.categories
   contains "work" %}
   {{site.baseurl}}{{site.cdn}}projects/{{post.slug}}/cover.jpg {% else %}
   {{site.baseurl}}{{site.cdn}}{{post.cover}} {% endif %} {% endcapture %} {%
   include card_large2.html align="right" url=post.url class="" title=post.slug
   categories=post.categories image=img description=post.intro %} {% endfor %}
-</div> {%- endcomment -%}
+</div>
+{%- endcomment -%}
