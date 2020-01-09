@@ -1,7 +1,7 @@
 <div
   class="isotope"
   style="margin-top:6rem;"
-data-isotope='{ 
+  data-isotope='{ 
         "itemSelector": ".grid-item-{{include.col}}",
         "percentPosition": "true",
         "masonry": {
@@ -15,48 +15,19 @@ data-isotope='{
 >
   <div class="grid-sizer-{{include.col}}"></div>
   <div class="gutter-sizer"></div>
-  {%- assign category = include.category -%}
-  {% assign work = site.posts | where: 'categories', category | sort:'date' | reverse %}
-  {% for post in work limit:99 %} 
-         {% capture img %}
-                {% if post.categories contains "work" %}
-                        {{site.baseurl}}{{site.cdn}}projects/{{post.slug}}/cover.jpg
-                {% else %}
-                        {{site.baseurl}}{{site.cdn}}{{post.cover}}
-                {% endif %} 
-        {% endcapture %} 
-        
-        
-        {% capture url %} 
-                {{post.url}}
-        {% endcapture %}
-
-        {% capture categories %} 
-                {% for category in post.categories %}
-                        {% if category != post.categories[0] %}
-                                {{category}}
-                        {% endif %} 
-                {% endfor %}
-        {% endcapture %}
-        
-        {% capture classes %} 
-                grid-item-{{include.col}} {{categories}}
-                
-                {%- comment -%} {% cycle 'note','shot','inspiration' %}  {%- endcomment -%}
-                
-        {% endcapture %} 
-
-        {% include card_masonry2.html
-                card= include.card 
-                url=post.url 
-                class=classes 
-                title=post.title
-                categories=categories 
-                img=img 
-        %} 
-
-  {% endfor %} {% comment %} {%
-  capture img_foodtopia %}
+  {%- assign category = include.category -%} {% assign work = site.posts |
+  where: 'categories', category | sort:'date' | reverse %} {% for post in work
+  limit:99 %} {% capture img %} {% if post.categories contains "work" %}
+  {{site.baseurl}}{{site.cdn}}projects/{{post.slug}}/cover.jpg {% else %}
+  {{site.baseurl}}{{site.cdn}}{{post.cover}} {% endif %} {% endcapture %} {%
+  capture url %} {{site.baseurl}}{{post.url}} {% endcapture %} {% capture
+  categories %} {% for category in post.categories %} {% if category !=
+  post.categories[0] %} {{category}} {% endif %} {% endfor %} {% endcapture %}
+  {% capture classes %} grid-item-{{include.col}} {{categories}} {%- comment -%}
+  {% cycle 'note','shot','inspiration' %} {%- endcomment -%} {% endcapture %} {%
+  include card_masonry2.html card= include.card url=post.url class=classes
+  title=post.title categories=categories img=img %} {% endfor %} {% comment %}
+  {% capture img_foodtopia %}
   {{site.baseurl}}/tumblr_files/tumblr_kxqvbcQjpj1qammdvo1_400.jpg {% endcapture
   %} {% include card_masonry.html
   url="https://www.linkedin.com/learning/foundations-of-programming-databases"
